@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Employee Portal - Enterprise Edition</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- External Libraries for specific features -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flatpickr/4.6.13/flatpickr.min.js"></script>
+
+    <style>
+        :root {
+            --primary-orange: #FF7A00;
+            --accent-orange: #FF9500;
+            --orange-light: #FFAB40;
+            --orange-dark: #E65100;
+            --orange-muted: #FFB74D;
+            --orange-subtle: rgba(255, 122, 0, 0.1);
+            --black-primary: #000000;
+            --black-secondary: #1a1a1a;
+            --black-tertiary: #2d2d2d;
+            --gray-dark: #404040;
+            --gray-medium: #666666;
+            --gray-light: #999999;
+            --bg-primary: #0f0f0f;
+            --bg-secondary: #1a1a1a;
+            --bg-tertiary: #2d2d2d;
+            --bg-card: #1f1f1f;
+            --bg-elevated: #252525;
+            --text-primary: #ffffff;
+            --text-secondary: #cccccc;
+            --text-muted: #999999;
+            --text-disabled: #666666;
+            --status-open: var(--primary-orange);
+            --status-ongoing: var(--accent-orange);
+            --status-completed: var(--gray-medium);
+            --status-warning: #FF6B00;
+            --status-error: #FF4444;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background-color: var(--bg-primary); 
+            color: var(--text-primary); 
+        }
+        .form-input { 
+            background-color: var(--bg-tertiary); 
+            border: 1px solid var(--gray-dark); 
+        }
+        .form-input:focus { 
+            border-color: var(--primary-orange); 
+            box-shadow: 0 0 0 2px rgba(255, 122, 0, 0.5); 
+            outline: none;
+        }
+        .nav-link.active { 
+            background-color: var(--primary-orange); 
+            color: white; 
+        }
+        .profile-tab.active, .db-tab.active { 
+            border-color: var(--primary-orange); 
+            color: var(--primary-orange); 
+        }
+        /* Custom scrollbar styles */
+        .custom-scrollbar::-webkit-scrollbar { width: 6px; }
+        .custom-scrollbar::-webkit-scrollbar-track { background: var(--bg-secondary); }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background-color: var(--gray-dark); border-radius: 20px; }
+
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://aistudiocdn.com/react@^19.1.1",
+    "react/": "https://aistudiocdn.com/react@^19.1.1/",
+    "@google/genai": "https://aistudiocdn.com/@google/genai@^1.21.0",
+    "react-dom/": "https://aistudiocdn.com/react-dom@^19.1.1/"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-gray-300">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
